@@ -34,39 +34,43 @@
       </div>
       <div class="row">
         <div class="currentTemp">
-        <span id ="temperature"> </span> 
-        <span><sup>℃</sup></span>
+          <span id="temperature"> </span>
+          <span><sup>℃</sup></span>
         </div>
 
-        <div class="row searchBar" id = "search-form">
+        <div class="row searchBar" id="search-form">
           <form>
             <input
               type="search"
               placeholder="Type a city"
-              autofocus   ="on"
-              autocomplete = "off"
+              autofocus="on"
+              autocomplete="off"
               class="locationSearchField"
-              id = "city-input"
+              id="city-input"
             />
             <input
               type="submit"
               type="button"
               value="Search"
               class="searchButton"
-              id = "search-button"
+              id="search-button"
             />
-            <input type="submit" value="Current Location" class="currentLocation" id = "current-location">
+            <input
+              type="submit"
+              value="Current Location"
+              class="currentLocation"
+              id="current-location"
+            />
           </form>
         </div>
-        <div class="row cityCountry" >
-          <h2 id="city">Search for a city 🙂 </h2>
+        <div class="row cityCountry">
+          <h2 id="city">Search for a city 🙂</h2>
         </div>
-        <div class="row date" >
-          <h2 id="date"> </h2>
+        <div class="row date">
+          <h2 id="date"></h2>
         </div>
         <div class="row">
           <div class="col details">
-            
             Conditions:
             <br />
             Humidity:
@@ -74,13 +78,12 @@
             Wind:
           </div>
           <div class="col data">
-          
-          <span id="description"></span>
-          <br />
-          <span id="humidity"></span> <span>%</span>
-          <br />
-          <span id="wind"></span> <span>kmh</span>        
-        </div>
+            <span id="description"></span>
+            <br />
+            <span id="humidity"></span> <span>%</span>
+            <br />
+            <span id="wind"></span> <span>kmh</span>
+          </div>
         </div>
       </div>
       <div class="row"></div>
@@ -158,14 +161,13 @@
     <hr />
     <p class="footer">
       Coded by
-      <a href="https://github.com/smorejon305/WeatherTheStorm.git" class="footerLink"></a>
-        <i class="fab fa-github"></i> Stefanie Morejon
-      </a>
-  
+      <a
+        href="https://github.com/smorejon305/WeatherTheStorm.git"
+        class="footerLink"
+        ><i class="fab fa-github"></i> Stefanie Morejon</a
+      >
     </p>
 
     <script src="src/app.js"></script>
-
-
   </body>
 </html>
