@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather the Storm</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/330daf4b01.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Weather the Storm</h1>
+      <hr />
+      <div class="row currentGraphic">
+        <i class="fas fa-sun"></i>
+      </div>
+      <div class="row">
+        <div class="currentTemp">
+        <span id ="temperature"> </span> 
+        <span><sup>℃</sup></span>
+        </div>
+
+        <div class="row searchBar" id = "search-form">
+          <form>
+            <input
+              type="search"
+              placeholder="Type a city"
+              autofocus   ="on"
+              autocomplete = "off"
+              class="locationSearchField"
+              id = "city-input"
+            />
+            <input
+              type="submit"
+              type="button"
+              value="Search"
+              class="searchButton"
+              id = "search-button"
+            />
+            <input type="submit" value="Current Location" class="currentLocation" id = "current-location">
+          </form>
+        </div>
+        <div class="row cityCountry" >
+          <h2 id="city">Search for a city 🙂 </h2>
+        </div>
+        <div class="row date" >
+          <h2 id="date"> </h2>
+        </div>
+        <div class="row">
+          <div class="col details">
+            
+            Conditions:
+            <br />
+            Humidity:
+            <br />
+            Wind:
+          </div>
+          <div class="col data">
+          
+          <span id="description"></span>
+          <br />
+          <span id="humidity"></span> <span>%</span>
+          <br />
+          <span id="wind"></span> <span>kmh</span>        
+        </div>
+        </div>
+      </div>
+      <div class="row"></div>
+      <hr />
+      <div class="container">
+        <div class="row weatherGraphics">
+          <div class="col" class="forecast">SATURDAY</div>
+          <div class="col" class="forecast">SUNDAY</div>
+          <div class="col" class="forecast">MONDAY</div>
+          <div class="col" class="forecast">TUESDAY</div>
+          <div class="col" class="forecast">WEDNESDAY</div>
+          <div class="col" class="forecast">THURSDAY</div>
+          <div class="col" class="forecast">FRIDAY</div>
+        </div>
+        <div class="row weatherGraphics">
+          <div class="col">
+            <img src="media/rainy.png" alt="rainy" class="forecastImage" />
+          </div>
+          <div class="col">
+            <img src="media/rainy.png" alt="rainy" class="forecastImage" />
+          </div>
+          <div class="col">
+            <img src="media/cloudy.png" alt="cloudy" class="forecastImage" />
+          </div>
+          <div class="col">
+            <img
+              src="media/partlycloudy.png"
+              alt="partly-cloudy"
+              class="forecastImage"
+            />
+          </div>
+          <div class="col">
+            <img src="media/sunny.png" alt="sunny" class="forecastImage" />
+          </div>
+          <div class="col">
+            <img
+              src="media/partlycloudy.png"
+              alt="partly-cloudy "
+              class="forecastImage"
+            />
+          </div>
+          <div class="col">
+            <img
+              src="media/rain_s_cloudy.png"
+              alt="rain_s_cloudy"
+              class="forecastImage"
+            />
+          </div>
+        </div>
+        <div class="row weatherGraphics">
+          <div class="col" class="forecast">
+            15<sup>°C</sup> | 7<sup>°C</sup>
+          </div>
+          <div class="col" class="forecast">
+            11<sup>°C</sup> | 3<sup>°C</sup>
+          </div>
+          <div class="col" class="forecast">
+            13<sup>°C</sup> | 5<sup>°C</sup>
+          </div>
+          <div class="col" class="forecast">
+            17<sup>°C</sup> | 7<sup>°C</sup>
+          </div>
+          <div class="col" class="forecast">
+            12<sup>°C</sup> | 4<sup>°C</sup>
+          </div>
+          <div class="col" class="forecast">
+            14 <sup>°C</sup> | 7<sup>°C</sup>
+          </div>
+          <div class="col" class="forecast">
+            14<sup>°C</sup> | 6<sup>°C</sup>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <p class="footer">
+      Coded by
+      <a href="https://www.instagram.com/SMorejon/" class="footerLink"></a>
+        Stefanie Morejon
+      </a>
+    </p>
+
+    <script src="src/app.js"></script>
+
+
+  </body>
+</html>

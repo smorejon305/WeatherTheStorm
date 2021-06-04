@@ -1,0 +1,90 @@
+body {
+  background: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: "Calistoga", cursive;
+}
+
+h1 {
+  font-size: 65px;
+  font-weight: 900;
+  margin-top: 15px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  color: black;
+}
+
+a {
+  color: #70afd2;
+  font-size: 15px;
+}
+.cityCountry {
+  padding: 10px;
+}
+.currentGraphic {
+  color: goldenrod;
+  font-size: 55px;
+  text-align: center;
+}
+
+.currentTemp {
+  display: block;
+  font-size: 75px;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 0 px;
+  text-align: center;
+}
+.celsiusFarenheit {
+  font-size: 15px;
+  vertical-align: super;
+}
+
+.searchBar {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.locationSearchField {
+}
+.searchButton {
+}
+
+.date {
+  font-size: 22px;
+  padding: 10px;
+}
+.details {
+  text-align: right;
+  text-size: 15px;
+}
+
+.data {
+  text-align: left;
+  text-size: 15px;
+}
+
+.weatherGraphics {
+}
+.forecast {
+  text-align: center;
+}
+
+.forecastImage {
+  padding: 10px;
+  text-align: center;
+}
+.footer {
+  text-align: center;
+}
+
+.units {
+  font-size: 15px;
+  text-align: super;
+}
