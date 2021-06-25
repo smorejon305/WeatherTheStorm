@@ -1,8 +1,7 @@
 // apiKey = b44c44391c0349160ac683c7b746d72d
 //apiUrl = https://api.openweathermap.org/data/2.5/weather?q={Paris}&units=metric&appid=b44c44391c0349160ac683c7b746d72d
 
-//WEEK 5 HOMEWORK
-
+//display weather function
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
