@@ -70,17 +70,17 @@ a {
   text-size: 15px;
 }
 
-.weatherGraphics {
-}
 .forecast {
-  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .forecastImage {
   max-width: 25%;
-  padding: 10px;
+  padding: 0.25em;
   text-align: center;
 }
+
 .footer {
   text-align: center;
 }
