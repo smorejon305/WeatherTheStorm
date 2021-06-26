@@ -3,6 +3,8 @@
 
 //display weather function
 function displayWeather(response) {
+  // document.querySelector("#current-graphic").setAttribute =
+  //   ("src", `http://openweathermap.org/img/wn/04d.png`);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
