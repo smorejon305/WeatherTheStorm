@@ -3,8 +3,13 @@
 
 //display weather function
 function displayWeather(response) {
-  // document.querySelector("#current-graphic").setAttribute =
-  //   ("src", `http://openweathermap.org/img/wn/04d.png`);
+  console.log(response);
+  document.querySelector("#current-icon").setAttribute =
+    ("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  console.log(response.data.weather[0].icon);
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
