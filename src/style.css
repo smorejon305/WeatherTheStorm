@@ -1,12 +1,31 @@
 body {
-  background: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-  /* background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); */
+  /* background: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+  background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  /* background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 197, 61) 0%,
+    rgb(255, 94, 7) 90%
+  ); */
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
   font-family: "Calistoga", cursive;
+}
+
+/* .weatherBox:hover {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  padding: 1.5em 0;
+} */
+
+.pageBox {
+  box-shadow: 5px 5px 18px 20px #367f94;
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 h1 {
@@ -90,6 +109,27 @@ a {
   text-align: center;
 }
 
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+  .split > * {
+    flex-basis: 100%;
+  }
+  /* for anything that has a sibling directly before it, so that the initial sibling isnt affected! */
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
 .footer {
   text-align: center;
+}
+
+.footerLink {
+  color: #000000;
+}
+
+.footerLink:hover {
+  color: #ffffff;
 }
