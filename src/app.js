@@ -96,4 +96,4 @@ function formatDate(date) {
   return `${days[dayIndex]}  ${hours}: ${minutes}`;
 }
 
-searchCity("New York");
+searchCity("Prague");
