@@ -4,9 +4,12 @@
 //display weather function
 function displayWeather(response) {
   console.log(response);
-  document.querySelector("#current-icon").setAttribute =
-    ("src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document
+    .querySelector("#current-icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 
   console.log(response.data.weather[0].icon);
 
