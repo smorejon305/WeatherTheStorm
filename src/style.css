@@ -31,11 +31,15 @@ body {
 h1 {
   font-size: 4em;
   margin-top: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
   text-align: center;
+  text-shadow: white 2px 2px;
 }
 h2 {
   text-align: center;
   color: black;
+  text-shadow: white 0.5px 1px;
 }
 
 a {
@@ -48,7 +52,7 @@ a {
 .currentIcon {
   display: block;
   margin: 0 auto;
-  max-width: 10%;
+  max-width: 25%;
 }
 
 .currentTemp {
@@ -58,6 +62,7 @@ a {
   margin-top: 0px;
   margin-bottom: 0 px;
   text-align: center;
+  text-shadow: white 1px 1px;
 }
 
 .tempUnits {
@@ -90,17 +95,18 @@ a {
 }
 .details {
   text-align: right;
-  text-size: 15px;
+  font-size: 15px;
 }
 
 .data {
   text-align: left;
-  text-size: 15px;
+  font-size: 15px;
 }
 
 .forecast {
-  display: inline-block;
+  display: block;
   margin: 0 auto;
+  text-align: center;
 }
 
 .forecastImage {
@@ -109,16 +115,9 @@ a {
   text-align: center;
 }
 
-@media (min-width: 40em) {
-  .split {
-    flex-direction: row;
-  }
-  .split > * {
-    flex-basis: 100%;
-  }
-  /* for anything that has a sibling directly before it, so that the initial sibling isnt affected! */
-  .split > * + * {
-    margin-left: 2em;
+@media (min-width: 600px) {
+  .forecastImage {
+    max-width: 33%;
   }
 }
 
