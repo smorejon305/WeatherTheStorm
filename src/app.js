@@ -96,4 +96,15 @@ function formatDate(date) {
   return `${days[dayIndex]}  ${hours}: ${minutes}`;
 }
 
+let celsiusTemperature = null;
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+let fahrenheitLink = document.querySelector("#temp-units-fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
 searchCity("Prague");
