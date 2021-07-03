@@ -9,7 +9,7 @@ body {
   background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   /* background: radial-gradient(
     circle at 10% 20%,
-    rgb(255, 197, 61) 0%,
+    rgb(255, 197, 61) 0%,s
     rgb(255, 94, 7) 90%
   ); */
 
@@ -114,20 +114,30 @@ a:hover {
   font-size: 15px;
 }
 
-.forecastDetails {
+/* FORECAST */
+.weather-forecast {
   justify-content: space-evenly;
 }
 
-.forecastImage {
-  max-width: 25%;
+.weather-forecast-date {
+  font-size: 1em;
+  text-align: center;
 }
 
-@media (min-width: 600px) {
-  .forecastImage {
-    max-width: 33%;
-  }
+.weather-forecast-icon {
+  max-width: 25;
+}
+.weather-forecast-temperature-max {
+  font-size: 0.8em;
+  text-align: center;
 }
 
+.weather-forecast-temperature-min {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* FOOTER */
 .footer {
   text-align: center;
 }
