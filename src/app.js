@@ -4,24 +4,35 @@
 //display forecast
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-              <div class="weather-forecast-date"> ${day}</div>
-              <div class="weather-forecast-icon">
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" />
-              </div>
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-2">
+              <div class="weather-forecast-date"> ${formatDay(
+                forecastDay.dt
+              )}</div>
+              ${index}
+                <img src="http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png" alt="" />
               <div class="weather-forecast-temperatures">
-                <span class="weather-forecast-temperature-max"> 18° </span>
-                <span class="weather-forecast-temperature-min">12°</span>
+                <span class="weather-forecast-temperature-max"> ${Math.round(
+                  forecastDay.temp.max
+                )}° </span>
+                <span class="weather-forecast-temperature-min">${Math.round(
+                  forecastDay.temp.min
+                )}° </span>
               </div>
       </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -133,6 +144,14 @@ function formatDate(date) {
   let day = days[dayIndex];
 
   return `${days[dayIndex]}  ${hours}: ${minutes}`;
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 10000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
 }
 
 let celsiusTemperature = null;
