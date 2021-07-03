@@ -3,7 +3,8 @@
 
 //display forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -25,6 +26,14 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "b44c44391c0349160ac683c7b746d72d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //display weather function
@@ -52,6 +61,8 @@ function displayWeather(response) {
     response.data.weather[0].main;
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
 
 function searchLocation(city) {
@@ -145,4 +156,3 @@ let celsiusLink = document.querySelector("#temp-units-celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Prague");
-displayForecast();
