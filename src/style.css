@@ -1,3 +1,9 @@
+:root {
+  --ff-accent: "Calistoga", cursive;
+  /* --ff-primary: "Roboto", sans-serif; */
+  --ff-primary: "Calistoga", cursive;
+}
+
 body {
   /* background: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
   background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
@@ -11,7 +17,7 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: "Calistoga", cursive;
+  font-family: var(--ff-primary);
   font-size: 16px;
 }
 
@@ -25,6 +31,7 @@ body {
 }
 
 h1 {
+  font-family: var(--ff-accent);
   font-size: 4em;
   margin-top: 0.5em;
   padding-top: 1em;
@@ -33,6 +40,7 @@ h1 {
   text-shadow: white 2px 2px;
 }
 h2 {
+  font-family: var(--ff-accent);
   text-align: center;
   color: black;
   margin: 0;
@@ -91,7 +99,9 @@ a:hover {
 }
 
 .date {
+  font-family: var(--ff-primary);
   font-size: 0.5em;
+  font-weight: 600;
   padding: 0.5em;
 }
 .details {
