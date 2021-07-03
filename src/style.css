@@ -11,13 +11,13 @@ body {
   margin: 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
   font-family: "Calistoga", cursive;
   font-size: 16px;
 }
 
 .pageBox {
   box-shadow: 5px 5px 18px 20px #367f94;
+  border-radius: 50px;
   display: block;
   margin: 0 auto;
   padding-bottom: 2em;
@@ -35,12 +35,16 @@ h1 {
 h2 {
   text-align: center;
   color: black;
+  margin: 0;
   text-shadow: darkgray 0.5px 1px;
 }
 
 a {
-  color: #70afd2;
-  font-size: 15px;
+  color: black;
+  font-size: 0.7em;
+}
+a:hover {
+  color: black;
 }
 .cityCountry {
   margin-top: 2em;
@@ -48,12 +52,13 @@ a {
 .currentIcon {
   display: block;
   margin: 0 auto;
+  padding: 0;
   max-width: 25%;
 }
 
 .currentTemp {
   display: block;
-  font-size: 5em;
+  font-size: 4em;
   margin: 0 auto;
   margin-top: 0px;
   margin-bottom: 0 px;
@@ -86,12 +91,12 @@ a {
 }
 
 .date {
-  font-size: 22px;
-  padding: 10px;
+  font-size: 0.5em;
+  padding: 0.5em;
 }
 .details {
   text-align: right;
-  font-size: 15px;
+  font-size: 1em;
 }
 
 .data {
