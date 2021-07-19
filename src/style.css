@@ -5,13 +5,7 @@
 }
 
 body {
-  /* background: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
   background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-  /* background: radial-gradient(
-    circle at 10% 20%,
-    rgb(255, 197, 61) 0%,s
-    rgb(255, 94, 7) 90%
-  ); */
 
   height: 100%;
   margin: 0;
